@@ -1,0 +1,69 @@
+<div class="col-xlg-12 col-md-12 col-12 mb-30">
+    <div class="box">
+        <div class="box-head d-flex justify-content-between align-items-center">
+            <h4 class="title">لیست مطالب</h4>
+            {{#if success}}
+                <div class="alert alert-success" role="alert">
+                    <i class="zmdi zmdi-info"></i>
+                    <span>{{success}}</span>
+                </div>
+            {{/if}}
+            <a
+                href="/admin/posts/create-new-post"
+                class="button button-primary button-clipboard mb-0 mt-15"
+            >ایجاد مطلب جدید</a>
+        </div>
+        <div class="box-body">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>عنوان</th>
+                        <th>نویسنده</th>
+                        <th>تاریخ ایجاد</th>
+                        <th>تعداد بازدید</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each posts}}
+                        <tr>
+                            <th>{{this.id}}</th>
+                            <td><a href="/{{this.slug}}">{{this.title}}</a></td>
+                            <td>{{this.full_name}}</td>
+                            <td>{{this.created_at_persian}}</td>
+                            <td>{{this.views}}</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="/admin/posts/edit/{{this.id}}">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <form
+                                        action="/admin/posts/delete"
+                                        method="post"
+                                    >
+                                        <input
+                                            type="hidden"
+                                            name="delete_id"
+                                            value="{{this.id}}"
+                                        />
+                                        <button
+                                            class="bg-transparent border-0"
+                                            type="submit"
+                                        >
+
+                                            <i class="fa fa-remove"></i>
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </td>
+                        </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

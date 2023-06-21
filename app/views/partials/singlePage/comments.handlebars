@@ -1,0 +1,19 @@
+<section class="section-gap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!--comments area start-->
+                <div class="comments">
+                    <h2 class="comments-title"> نظرات</h2>
+                 {{>singlePage/comments/list comments=this.comments}}
+                </div>
+                <!--comments area end-->
+                <!--comment form area start-->
+                
+                {{>singlePage/commentForm this}}
+                <!--comment form area end-->
+
+            </div>
+        </div>
+    </div>
+</section>

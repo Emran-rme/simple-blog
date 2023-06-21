@@ -1,0 +1,68 @@
+<div class="col-xlg-12 col-md-12 col-12 mb-30">
+    <div class="box">
+        <div class="box-head">
+            <h4 class="title">لیست دیدگاه ها</h4>
+
+        </div>
+        <div class="box-body">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>نویسنده</th>
+                        <th>دیدگاه</th>
+                        <th>در پاسخ به</th>
+                        <th>ارسال شده</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{#each comments}}
+                        <tr class="comment-row {{this.class}}">
+                            <th>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar mr-10 mb-10">
+                                        <img
+                                            src="{{this.userAvatar}}"
+                                            alt="user"
+                                        />
+                                    </div>
+                                    <div class="name mr-10 mb-10">
+                                        {{this.user_name}}
+                                    </div>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="comment">{{this.comment}}</div>
+                                {{#if this.class}}{{/if}}
+                                <div class="comment-operations mt-10 {{#if this.class}} d-none {{else}} d-bloc {{/if}}">
+                                    <a
+                                        href="/admin/comments/{{this.id}}?status=2"
+                                        class="button button-xs button-success"
+                                    >
+                                        <span>تایید</span>
+                                    </a>
+                                    <a
+                                        href="/admin/comments/{{this.id}}?status=0"
+                                        class="button button-xs button-warning"
+                                    >
+                                        <span>رد</span>
+                                    </a>
+                                    <a
+                                        href="/admin/comments/{{this.id}}?status=1"
+                                        class="button button-xs button-danger"
+                                    >
+                                        <span>حذف</span>
+                                    </a>
+                                </div>
+
+                            </td>
+                            <td><a href="/{{this.slug}}">{{this.title}}</a></td>
+                            <td>{{this.created_at_persian}}</td>
+
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

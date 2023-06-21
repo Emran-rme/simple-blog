@@ -1,0 +1,41 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "_moduleAliases": {
+        "@root": ".",
+        "@models": "app/models",
+        "@controllers": "app/controllers",
+        "routes": "app/routes",
+        "@services": "app/services",
+        "@database": "database",
+        "@validation": "app/validation",
+        "@middleware": "app/middleware",
+        "@presenters": "app/presenters"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "connect-flash": "^0.1.1",
+        "connect-redis": "^7.1.0",
+        "dotenv": "^16.1.4",
+        "express": "^4.18.2",
+        "express-fileupload": "^1.4.0",
+        "express-handlebars": "^7.0.7",
+        "express-mysql-session": "^3.0.0",
+        "express-session": "^1.17.3",
+        "gravatar": "^1.8.2",
+        "jalali-moment": "^3.3.11",
+        "lodash": "^4.17.21",
+        "module-alias": "^2.2.3",
+        "mysql2": "^3.3.3",
+        "redis": "^4.6.7",
+        "uuid": "^9.0.0"
+    }
+}

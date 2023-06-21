@@ -1,0 +1,13 @@
+<div class="pagination justify-content-center">
+    <a href="/?page={{pagination.prevPage}}" class="btn btn-dark {{#showDisabled pagination.hasPrevPage}}{{/showDisabled}}"><i
+            class="fa fa-angle-left"
+        ></i></a>
+    <div class="h6 mt-2 mx-4">
+        {{pagination.page}}
+        از
+        {{pagination.totalPage}}
+    </div>
+    <a href="/?page={{pagination.nextPage}}" class="btn btn-dark {{#showDisabled pagination.hasNextPage}}{{/showDisabled}}"><i
+            class="fa fa-angle-right"
+        ></i></a>
+</div>

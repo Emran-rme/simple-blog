@@ -1,0 +1,49 @@
+
+<!--page title start-->
+{{>singlePage/pageTitle this}}
+<!--page title end-->
+
+<!--blog start-->
+<section class="section-gap pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="blog-post border-0 blog-single">
+                    
+                       {{{post.content}}}
+                    
+
+                    <h6 class="mb-0">برچسب ها:
+                        <a href="#" class="badge badge-pill badge-dark">غذا</a>
+                        <a href="#" class="badge badge-pill badge-dark">غذا
+                            کودکان</a>
+                        <a
+                            href="#"
+                            class="badge badge-pill badge-dark"
+                        >رستوران</a>
+                    </h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr />
+<!--authors area start-->
+
+{{>singlePage/authors this}}
+<!--authors area end-->
+<hr />
+<!--comments area start-->
+
+{{>singlePage/comments this}}
+<!--comments area end-->
+
+<!--relatedPosts area start-->
+
+{{>singlePage/relatedPosts this}}
+<!--relatedPosts area end-->
+
+
+
+<!--blog end-->
